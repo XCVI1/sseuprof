@@ -1,0 +1,34 @@
+<!-- admin_panel/templates/students.html -->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Список студентов</title>
+</head>
+<body>
+    <h1>Список студентов</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Имя</th>
+                <th>Номер телефона</th>
+                <th>Результат тестирования</th>
+                <th>Дата</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for student in students %}
+            <tr>
+                <td>{{ student.id }}</td>
+                <td>{{ student.name }}</td>
+                <td>{{ student.phone }}</td>
+                <td>{{ student.test_result }}</td>
+                <td>{{ student.date }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
