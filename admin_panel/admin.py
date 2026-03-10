@@ -3,8 +3,7 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
-# Путь к JSON-файлу
-DATA_FILE = 'users.json'  # Укажите путь к вашему JSON-файлу
+DATA_FILE = 'users.json'
 
 def load_students_from_json():
     """Функция для загрузки данных из JSON-файла"""
@@ -34,3 +33,4 @@ def students_list():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
